@@ -933,23 +933,13 @@
       .table-wrap::after {
         content: '';
         position: absolute;
-        top: 0; right: 0; bottom: 0;
-        width: 34px;
-        background: linear-gradient(to left, rgba(10,10,15,0.98), rgba(10,10,15,0));
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 22px;
+        background: linear-gradient(to left, rgba(10,10,15,0.55), rgba(10,10,15,0));
         pointer-events: none;
         border-radius: 0 10px 10px 0;
-      }
-
-      .table-wrap::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 14px;
-        background: linear-gradient(to right, rgba(10,10,15,0.7), rgba(10,10,15,0));
-        pointer-events: none;
-        z-index: 2;
       }
 
       .phase-amount {
@@ -963,18 +953,28 @@
       .table-scroll-hint { display: none; }
     }
 
-    /* Sticky first column only on tablet+ to keep mobile horizontal swipe natural */
-    @media (min-width: 640px) {
-      tbody td:first-child,
+    /* Sticky first column only on wider screens with smooth seam */
+    @media (min-width: 768px) {
       thead th:first-child {
         position: sticky;
         left: 0;
-        background: #0F1923;
-        z-index: 1;
-        border-right: 1px solid rgba(232,25,44,0.25);
+        background: #c71029;
+        z-index: 4;
+        border-right: 1px solid rgba(232,25,44,0.22);
+        box-shadow: 10px 0 20px -18px rgba(0, 0, 0, 0.8);
       }
 
-      thead th:first-child { background: #b81424; z-index: 2; }
+      tbody tr:nth-child(odd) td:first-child,
+      tbody tr:nth-child(even) td:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 2;
+        border-right: 1px solid rgba(232,25,44,0.16);
+        box-shadow: 10px 0 20px -18px rgba(0, 0, 0, 0.75);
+      }
+
+      tbody tr:nth-child(odd) td:first-child { background: rgba(15,25,35,0.97); }
+      tbody tr:nth-child(even) td:first-child { background: rgba(24,24,38,0.97); }
     }
 
     /* FIX 4 */
@@ -1271,7 +1271,7 @@
 
         <div class="check-grid">
       <article class="check-card"><div class="check-icon">✓</div><div><h3 class="check-title">Концепция проекта</h3><p class="check-desc">Позиционирование, слоган, портрет ЦА, уникальное отличие от конкурентов.</p></div></article>
-      <article class="check-card"><div class="check-icon">✓</div><div><h3 class="check-title">Брендбк DeloVoiZanos</h3><p class="check-desc">Цветовая палитра, типографика, форматы для 7 платформ, правила оверлеев.</p></div></article>
+      <article class="check-card"><div class="check-icon">✓</div><div><h3 class="check-title">Брендбук DeloVoiZanos</h3><p class="check-desc">Цветовая палитра, типографика, форматы для 7 платформ, правила оверлеев.</p></div></article>
       <article class="check-card"><div class="check-icon">✓</div><div><h3 class="check-title">Финансовая модель</h3><p class="check-desc">Полная смета инфраструктуры.</p></div></article>
       <article class="check-card"><div class="check-icon">✓</div><div><h3 class="check-title">План прогрева и модерации</h3><p class="check-desc">Подготовлены сценарии прогрева, регламенты модерации и операционные инструкции.</p></div></article>
     </div>
@@ -1280,3 +1280,4 @@
   <button class="print-btn" onclick="window.print()">Печать</button>
 </body>
 </html>
+
