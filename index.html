@@ -639,6 +639,325 @@
 
     .print-btn:active { transform: translateY(0); }
 
+
+
+    /* FIX 2 — phase cards redesign */
+    .phase-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 100%;
+      align-items: stretch;
+    }
+
+    .phase-card {
+      display: flex;
+      flex-direction: row;
+      height: auto;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .phase-sidebar {
+      width: 6px;
+      flex-shrink: 0;
+      border-radius: 10px 0 0 10px;
+      background: linear-gradient(135deg,#E8192C,#8B0011);
+    }
+
+    .phase-sidebar.gold {
+      background: linear-gradient(135deg,#C9A84C,#8B6914);
+    }
+
+    .phase-main {
+      flex: 1;
+      padding: clamp(24px,4vw,36px) clamp(20px,4vw,40px);
+    }
+
+    .phase-top {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .phase-pill {
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 13px;
+      padding: 6px 16px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      line-height: 1;
+      background: linear-gradient(135deg,#E8192C,#8B0011);
+    }
+
+    .phase-pill.gold {
+      background: rgba(201,168,76,0.15);
+      border: 1px solid #C9A84C;
+      color: #C9A84C;
+    }
+
+    .phase-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(20px,3.5vw,28px);
+      color: #F0F0F5;
+      line-height: 1;
+      letter-spacing: .5px;
+    }
+
+    .phase-amount {
+      margin-left: auto;
+      background: rgba(232,25,44,0.12);
+      border: 1px solid #E8192C;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-align: center;
+      min-width: min(100%, 220px);
+    }
+
+    .phase-amount.gold {
+      background: rgba(201,168,76,0.08);
+      border: 1px solid #C9A84C;
+    }
+
+    .phase-amount-label {
+      font: 11px 'Inter', sans-serif;
+      color: #6B6B7A;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1.2;
+    }
+
+    .phase-amount-value {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(22px,4vw,34px);
+      color: #C9A84C;
+      line-height: 1;
+      margin-top: 4px;
+    }
+
+    .phase-amount-value.sm {
+      font-size: clamp(20px,3vw,28px);
+    }
+
+    .phase-divider {
+      border: 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin: 0 0 20px;
+    }
+
+    .phase-items {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .phase-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .phase-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(232,25,44,0.12);
+      color: #E8192C;
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .phase-text {
+      font: 14px 'Inter', sans-serif;
+      color: #F0F0F5;
+      line-height: 1.5;
+    }
+
+    .trigger-banner {
+      width: 100%;
+      margin-bottom: 20px;
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 6px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .trigger-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(201,168,76,0.2);
+      color: #C9A84C;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    .trigger-text {
+      font: 13px 'Inter', sans-serif;
+      color: #6B6B7A;
+      line-height: 1.5;
+    }
+
+    .split-wrap { margin-top: 32px; }
+
+    .split-bar {
+      display: flex;
+      gap: 8px;
+      width: 100%;
+      height: auto;
+      background: transparent;
+      border-radius: 0;
+      overflow: visible;
+    }
+
+    .split-left {
+      flex: 0 0 calc(70% - 4px);
+      background: linear-gradient(135deg,#E8192C,#8B0011);
+      border-radius: 10px;
+      height: clamp(56px,8vw,80px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font: clamp(15px,3.5vw,26px) 'Bebas Neue', sans-serif;
+      color: #fff;
+      letter-spacing: 2px;
+      padding: 0 12px;
+    }
+
+    .split-right {
+      flex: 0 0 calc(30% - 4px);
+      background: #161622;
+      border: 1px solid rgba(232,25,44,0.25);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font: clamp(14px,3vw,24px) 'Bebas Neue', sans-serif;
+      color: #C9A84C;
+      letter-spacing: 2px;
+      padding: 0 12px;
+    }
+
+    .split-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .split-meta span {
+      font: 12px 'Inter', sans-serif;
+      color: #6B6B7A;
+    }
+
+    .split-meta span:last-child { text-align: right; }
+
+    /* FIX 3 — table visuals */
+    .table-scroll-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 8px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 4px;
+      padding: 6px 12px;
+      width: fit-content;
+      font: 11px 'Inter', sans-serif;
+      color: #6B6B7A;
+      letter-spacing: .5px;
+    }
+
+    .table-wrap { position: relative; }
+    .table-wrap::-webkit-scrollbar { height: 4px; }
+    .table-wrap::-webkit-scrollbar-track { background: #161622; border-radius: 2px; }
+    .table-wrap::-webkit-scrollbar-thumb { background: #E8192C; border-radius: 2px; }
+
+    @media (max-width: 639px) {
+      .table-wrap::after {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0;
+        width: 40px;
+        background: linear-gradient(to left, #0A0A0F, transparent);
+        pointer-events: none;
+        border-radius: 0 10px 10px 0;
+      }
+      .phase-amount {
+        margin-left: 0;
+        margin-top: 12px;
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 640px) {
+      .table-scroll-hint { display: none; }
+    }
+
+    tbody td:first-child,
+    thead th:first-child {
+      position: sticky;
+      left: 0;
+      background: #0F1923;
+      z-index: 1;
+      border-right: 1px solid rgba(232,25,44,0.25);
+    }
+
+    thead th:first-child { background: #b81424; z-index: 2; }
+
+    /* FIX 4 */
+    .section::after {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(135deg,#E8192C,#8B0011);
+      border-radius: 2px;
+      margin: clamp(32px,5vw,56px) auto;
+      display: block;
+    }
+
+    .card:hover,
+    .check-card:hover,
+    .phase-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(232,25,44,0.18);
+      transition: all 0.25s ease;
+    }
+
+    .money {
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.5px;
+    }
+
+    .section {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-left: max(16px, env(safe-area-inset-left));
+      padding-right: max(16px, env(safe-area-inset-right));
+    }
+
+    @media (min-width: 640px) {
+      .phase-items { grid-template-columns: repeat(2,1fr); }
+    }
+
     @media (max-width: 399px) {
       .split-left,
       .split-right {
@@ -691,7 +1010,7 @@
       <span class="hl">D</span><span class="base">elo</span><span class="hl">V</span><span class="base">oi</span><span class="hl">Z</span><span class="base">anos</span>
     </h1>
     <div class="line-red" aria-hidden="true"></div>
-    <p class="cover-subtitle">ПАРТНЁРСОЕ ПРЕДЛОЖЕНИЕ</p>
+    <p class="cover-subtitle">ПАРТНЁРСКОЕ ПРЕДЛОЖЕНИЕ</p>
     <p class="cover-title">Продюсер × Стример — Условия сотрудничества</p>
 
     <div class="badges-grid">
@@ -752,6 +1071,7 @@
 
     <div class="table-block">
       <h3 class="table-title">Единоразовые расходы</h3>
+      <div class="table-scroll-hint"><span>↔</span><span>Прокрутите таблицу вправо</span></div>
       <div class="table-wrap">
         <table>
           <thead>
@@ -769,6 +1089,7 @@
 
     <div class="table-block">
       <h3 class="table-title">Ежемесячные расходы</h3>
+      <div class="table-scroll-hint"><span>↔</span><span>Прокрутите таблицу вправо</span></div>
       <div class="table-wrap">
         <table>
           <thead>
@@ -812,29 +1133,48 @@
 
     <div class="phase-grid">
       <article class="phase-card">
-        <div class="phase-head red">ЭТАП 1 — ДО МОНЕТИЗАЦИИ</div>
-        <div class="phase-body">
-          <div>Ежемесячное вознаграждение продюсера:</div>
-          <div class="big-money">30 000 ₽/мес</div>
-          <ul>
-            <li>Оплачивается стримером ежемесячно</li>
-            <li>Инфраструктура (<span class="money">~24 690 ₽/мес</span>) оплачивается стримером отдельно и напрямую</li>
-            <li>Все работы продюсера выполняются в полном объёме с первого дня</li>
-            <li>Фиксированная ставка действует до момента выхода на монетизацию</li>
+        <div class="phase-sidebar"></div>
+        <div class="phase-main">
+          <div class="phase-top">
+            <span class="phase-pill">ЭТАП 1</span>
+            <div class="phase-title">До монетизации</div>
+            <div class="phase-amount">
+              <div class="phase-amount-label">Ежемесячно продюсеру</div>
+              <div class="phase-amount-value">30 000 ₽</div>
+            </div>
+          </div>
+          <hr class="phase-divider" />
+          <ul class="phase-items">
+            <li class="phase-item"><span class="phase-dot">▸</span><span class="phase-text">Оплачивается стримером ежемесячно до выхода на монетизацию</span></li>
+            <li class="phase-item"><span class="phase-dot">▸</span><span class="phase-text">Инфраструктура (~24 690 ₽/мес) оплачивается стримером отдельно</span></li>
+            <li class="phase-item"><span class="phase-dot">▸</span><span class="phase-text">Все работы продюсера выполняются в полном объёме с первого дня</span></li>
+            <li class="phase-item"><span class="phase-dot">▸</span><span class="phase-text">Ставка действует до первого месяца с доходом от аффилиатки &gt;= 100 000 руб/мес</span></li>
           </ul>
         </div>
       </article>
 
       <article class="phase-card">
-        <div class="phase-head gold">
-          ЭТАП 2 — ПОСЛЕ МОНЕТИЗАЦИИ
-          <div class="trigger-pill">Активируется когда доход от аффилиатки ≥ 100 000 ₽/мес</div>
-        </div>
-        <div class="phase-body">
-          <ul>
-            <li>Фиксированная ставка продюсера (<span class="money">30 000 ₽/мес</span>) — ОТМЕНЯЕТСЯ</li>
-            <li>Включается долевое распределение чистой прибыли</li>
-            <li>Формула: Доход от аффилиатки − инфраструктура − трафик − призы = Чистая прибыль</li>
+        <div class="phase-sidebar gold"></div>
+        <div class="phase-main">
+          <div class="phase-top">
+            <span class="phase-pill gold">ЭТАП 2</span>
+            <div class="phase-title">После монетизации</div>
+            <div class="phase-amount gold">
+              <div class="phase-amount-label">Порог активации</div>
+              <div class="phase-amount-value sm">100 000 руб/мес</div>
+            </div>
+          </div>
+
+          <div class="trigger-banner">
+            <span class="trigger-icon">!</span>
+            <span class="trigger-text">Фиксированная ставка продюсера (30 000 руб/мес) — отменяется. Переход на долевое распределение чистой прибыли.</span>
+          </div>
+
+          <ul class="phase-items">
+            <li class="phase-item"><span class="phase-dot">▸</span><span class="phase-text">70% — DeloVoiZanos: лицо продукта, стримы 6 дней/нед по 7-9 часов</span></li>
+            <li class="phase-item"><span class="phase-dot">▸</span><span class="phase-text">30% — Продюсер: контент-завод, модерация, Telegram, переговоры с казино</span></li>
+            <li class="phase-item"><span class="phase-dot">▸</span><span class="phase-text">Формула: Доход от аффилиатки минус инфраструктура минус трафик минус призы = Чистая прибыль</span></li>
+            <li class="phase-item"><span class="phase-dot">▸</span><span class="phase-text">Расчёт и выплаты — ежемесячно по итогам закрытого периода</span></li>
           </ul>
         </div>
       </article>
@@ -845,10 +1185,14 @@
         <div class="split-left">70% — DeloVoiZanos</div>
         <div class="split-right">30% — Продюсер</div>
       </div>
-      <div class="split-label">Распределение чистой прибыли после выхода на монетизацию</div>
+      <div class="split-meta">
+        <span>Стример — лицо, время, стримы</span>
+        <span>Продюсер — инфраструктура, операции</span>
+      </div>
     </div>
 
     <div class="table-block">
+      <div class="table-scroll-hint"><span>↔</span><span>Прокрутите таблицу вправо</span></div>
       <div class="table-wrap">
         <table>
           <thead>
@@ -869,13 +1213,10 @@
       <h2>Что уже сделано</h2>
     </div>
 
-    <div class="check-grid">
+        <div class="check-grid">
       <article class="check-card"><div class="check-icon">✓</div><div><h3 class="check-title">Концепция проекта</h3><p class="check-desc">Позиционирование, слоган, портрет ЦА, уникальное отличие от конкурентов.</p></div></article>
       <article class="check-card"><div class="check-icon">✓</div><div><h3 class="check-title">Брендбук DeloVoiZanos</h3><p class="check-desc">Цветовая палитра, типографика, форматы для 7 платформ, правила оверлеев.</p></div></article>
       <article class="check-card"><div class="check-icon">✓</div><div><h3 class="check-title">Финансовая модель</h3><p class="check-desc">Полная смета инфраструктуры.</p></div></article>
-      <article class="check-card"><div class="check-icon">✓</div><div><h3 class="check-title">Контент-завод n8n + HeyGen</h3><p class="check-desc">Собрана и протестирована автоматизация генерации и дистрибуции контента.</p></div></article>
-      <article class="check-card"><div class="check-icon">✓</div><div><h3 class="check-title">Архитектура аккаунтов</h3><p class="check-desc">Подготовлены структуры каналов и оформление профилей для ключевых платформ.</p></div></article>
-      <article class="check-card"><div class="check-icon">✓</div><div><h3 class="check-title">Telegram-экосистема</h3><p class="check-desc">Шаблоны контента, логика публикаций и сценарии чат-бота для промокодов.</p></div></article>
       <article class="check-card"><div class="check-icon">✓</div><div><h3 class="check-title">План прогрева и модерации</h3><p class="check-desc">Подготовлены сценарии прогрева, регламенты модерации и операционные инструкции.</p></div></article>
     </div>
   </section>
