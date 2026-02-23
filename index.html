@@ -930,17 +930,6 @@
         font-size: 11px;
       }
 
-      .table-wrap::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 22px;
-        background: linear-gradient(to left, rgba(10,10,15,0.55), rgba(10,10,15,0));
-        pointer-events: none;
-        border-radius: 0 10px 10px 0;
-      }
 
       .phase-amount {
         margin-left: 0;
@@ -953,7 +942,7 @@
       .table-scroll-hint { display: none; }
     }
 
-    /* Sticky first column only on wider screens with smooth seam */
+    /* Sticky first column only on wider screens (clean edge, no fade transition) */
     @media (min-width: 768px) {
       thead th:first-child {
         position: sticky;
@@ -961,7 +950,6 @@
         background: #c71029;
         z-index: 4;
         border-right: 1px solid rgba(232,25,44,0.22);
-        box-shadow: 10px 0 20px -18px rgba(0, 0, 0, 0.8);
       }
 
       tbody tr:nth-child(odd) td:first-child,
@@ -970,7 +958,6 @@
         left: 0;
         z-index: 2;
         border-right: 1px solid rgba(232,25,44,0.16);
-        box-shadow: 10px 0 20px -18px rgba(0, 0, 0, 0.75);
       }
 
       tbody tr:nth-child(odd) td:first-child { background: rgba(15,25,35,0.97); }
@@ -1097,7 +1084,7 @@
       </article>
       <article class="card">
         <h3>Создание и оформление аккаунтов</h3>
-        <p>Регистрация и брендирование на всех платформах: Kick (основная), YouTube (основной + 2–3 нарезочных), TikTok, Twitch, Telegram (канал + чат), VK, Яндекс.Дзен. Баннеры, аватары, описания, панели, стрим-оверлеи.</p>
+        <p>Регистрация и брендирование на всех платформах: Kick (основная), YouTube (основной + 2–3 нарезочных), TikTok, Twitch, Telegram (канал + чат), VK, Яндекс.Дзен. Баннеры, аватары, описния, панели, стрим-оверлеи.</p>
       </article>
       <article class="card">
         <h3>Модерация стримов</h3>
@@ -1229,7 +1216,7 @@
           <ul class="phase-items">
             <li class="phase-item"><span class="phase-dot">▸</span><span class="phase-text">70% — DeloVoiZanos: лицо продукта, стримы 6 дней/нед по 7-9 часов</span></li>
             <li class="phase-item"><span class="phase-dot">▸</span><span class="phase-text">30% — Продюсер: контент-завод, модерация, Telegram, переговоры с казино</span></li>
-            <li class="phase-item"><span class="phase-dot">▸</span><span class="phase-text">Формула: Доход от аффилиатки минус инфраструктура минус трафик минус призы = Чистая прибыль</span></li>
+            <li class="phase-item"><span class="phase-dot">▸</span><span class="phase-text">Формула: Доход от аффилиатки минус инфраструктура минус трафик минус прзы = Чистая прибыль</span></li>
             <li class="phase-item"><span class="phase-dot">▸</span><span class="phase-text">Расчёт и выплаты — ежемесячно по итогам закрытого периода</span></li>
           </ul>
         </div>
@@ -1280,4 +1267,3 @@
   <button class="print-btn" onclick="window.print()">Печать</button>
 </body>
 </html>
-
